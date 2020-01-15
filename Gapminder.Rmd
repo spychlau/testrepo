@@ -1,0 +1,30 @@
+---
+title: "Untitled"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+```{r}
+
+library(tidyverse)
+install.packages("socviz")
+library(socviz)
+
+library(ggplot2)
+
+install.packages("gapminder")
+library(gapminder) 
+gapminder
+
+p <- ggplot(gapminder, aes(gdpPercap, lifeExp))
+p
+
+p + geom_point()
+
+p + geom_smooth()
+
+p + geom_point() +
+  geom_smooth()
+
+```
+
